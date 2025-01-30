@@ -1,5 +1,18 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import axios from "axios";
 
-createApp(App).mount('#app')
+async function fetchData() {
+  try {
+    // Axios - GET data locally from JSON file
+    const response = await axios.get("/fakeStoreData.json");
+    console.log("Data sucessfully fetched!", response.data);
+  } catch (error) {
+    console.error("Error when fetching data", error.message);
+  }
+}
+
+fetchData();
+
+createApp(App).mount("#app");
