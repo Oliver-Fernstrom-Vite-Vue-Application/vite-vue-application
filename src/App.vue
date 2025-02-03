@@ -1,6 +1,7 @@
 <script setup>
 import { useProductStore } from "./stores/productStores.js";
 import { onMounted } from "vue";
+import navbar from "./components/navbar.vue";
 
 // Import store
 const productStore = useProductStore();
@@ -12,6 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <navbar />
   <div>
     <h1>Products</h1>
     <p v-if="productStore.loading">Loading products...</p>
