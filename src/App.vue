@@ -1,10 +1,10 @@
 <script setup>
 import { useProductStore } from "./stores/productStores.js";
 import { onMounted } from "vue";
-import navbar from "./components/navbar.vue";
+import ProductList from "./components/ProductList.vue";
+import Navbar from "./components/navbar.vue";
 
-// Import store
-const productStore = useProductStore();
+const productStore = useProductStore(); // Import store
 
 // Run loadProducts() from store when the component is mounting
 onMounted(() => {
@@ -13,9 +13,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <navbar />
+  <Navbar />
   <div>
-    <h1>Products</h1>
+    <h1 class="text-2xl font-bold mb-4">Produkter</h1>
+    <ProductList />
+  </div>
+  <!-- <Navbar />
+  <div class="container mt-4">
+    <router-view />
+  </div> -->
+  <!--   <div>
+
+
     <p v-if="productStore.loading">Loading products...</p>
     <p v-if="productStore.error" class="error">{{ productStore.error }}</p>
     <ul v-else>
@@ -26,7 +35,7 @@ onMounted(() => {
         <p class="description">{{ product.description }}</p>
       </li>
     </ul>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
