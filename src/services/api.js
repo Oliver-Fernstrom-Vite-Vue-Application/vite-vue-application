@@ -2,14 +2,15 @@
 import axios from "axios";
 
 // Saving the API url to a const //
-const API_URL = "https://fakestoreapi.com/products";
+const API_URL = "https://dummyjson.com/products";
 
 // async function - fetch data from API_URL
 export async function fetchData() {
   try {
     const response = await axios.get(API_URL);
-    console.log("✅ Data fetched sucessfully from Fake Store API!");
-    return response.data;
+    console.log("✅ Data fetched sucessfully from: Fake Store API!");
+    const data = response.data;
+    return data.products;
   } catch (error) {
     console.error("Error when fetching data", error.message);
 
@@ -17,7 +18,7 @@ export async function fetchData() {
     try {
       const response = await fetch("./public/fakeStoreData.json");
       const fallBackData = await response.json();
-      console.log("Using fallback data from local JSON file.");
+      console.log("✅ Data fetched sucessfully from: local JSON file.");
       return fallBackData;
 
       // If local JSON fetch also fails, throw error
