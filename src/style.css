@@ -13,10 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .card-columns {
-  @include media-breakpoint-only(lg) {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
     column-count: 4;
   }
-  @include media-breakpoint-only(xl) {
+  @media (min-width: 1200px) {
     column-count: 5;
   }
 }
