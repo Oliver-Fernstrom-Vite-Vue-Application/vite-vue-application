@@ -15,8 +15,9 @@ onMounted(() => {
 
 <template>
   <Navbar />
-  <div>
-    <h1 class="text-2xl font-bold mb-4">Produkter</h1>
+  <div id="nav"></div>
+  <RouterView />
+  <div v-if="$route.path !== '/contact'">
     <ProductList />
   </div>
 </template>
@@ -24,13 +25,6 @@ onMounted(() => {
 <style scoped>
 .error {
   color: red;
-  font-weight: bold;
-}
-li {
-  list-style: none;
-}
-.product-title {
-  font-size: 1.3rem;
   font-weight: bold;
 }
 </style>

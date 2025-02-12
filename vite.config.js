@@ -8,6 +8,9 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [BootstrapVueNextResolver()],
+      server: {
+        historyApiFallback: true,
+      },
     }),
   ],
 

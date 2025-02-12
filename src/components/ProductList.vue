@@ -1,7 +1,7 @@
 <script setup>
 import { useProductStore } from "../stores/productStores";
 import { onMounted } from "vue";
-import ProductCard from "./ProductCard.vue";
+import ProductCard from "./ProductCard.vue"; // ProductCard = child component
 
 const productStore = useProductStore();
 
@@ -12,7 +12,7 @@ onMounted(() => {
 
 <template>
   <div class="container mt-4">
-    <h2 class="mb-4 text-center">Produkter</h2>
+    <h2 class="mb-4 text-center">Discover products</h2>
 
     <div class="row">
       <div

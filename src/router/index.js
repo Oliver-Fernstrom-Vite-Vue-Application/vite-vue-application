@@ -1,7 +1,10 @@
+// import the createRouter function and createWebHistory function from the vue-router package
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Contact from "../views/Contact.vue";
+import productDetails from "../views/ProductDetails.vue";
 
+// Define the routes
 const routes = [
   {
     path: "/",
@@ -9,15 +12,23 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: About,
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+  },
+  // Dynamic route with a parameter
+  {
+    path: "/product/:id",
+    name: "productDetails",
+    component: productDetails,
   },
 ];
 
+// Create the router instance
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
 
+// Export the router instance
 export default router;
