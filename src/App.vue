@@ -1,9 +1,9 @@
 <script setup>
 import { useProductStore } from "./stores/productStores.js";
 import { onMounted } from "vue";
-import ProductList from "./components/ProductList.vue";
 import Navbar from "./components/navbar.vue";
 import { RouterView } from "vue-router";
+import Footer from "./components/Footer.vue";
 
 const productStore = useProductStore(); // Import store
 
@@ -17,9 +17,7 @@ onMounted(() => {
   <Navbar />
   <div id="nav"></div>
   <RouterView />
-  <div v-if="$route.path !== '/contact'">
-    <ProductList />
-  </div>
+  <Footer />
 </template>
 
 <style scoped>

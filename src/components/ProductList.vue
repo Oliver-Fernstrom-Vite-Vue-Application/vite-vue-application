@@ -6,12 +6,12 @@ import ProductCard from "./ProductCard.vue"; // ProductCard = child component
 const productStore = useProductStore();
 
 onMounted(() => {
-  productStore.loadProducts(); // Ladda produkter från API vid sidans start
+  productStore.loadProducts(); // load products from the API
 });
 </script>
 
 <template>
-  <div class="container mt-4">
+  <div class="container mt-4 custom-container">
     <h2 class="mb-4 text-center">Discover products</h2>
 
     <div class="row">
@@ -25,3 +25,14 @@ onMounted(() => {
     </div>
   </div>
 </template>
+<style scope>
+.text-center {
+  color: var(--text-color);
+}
+body {
+  background-color: var(--bg-color-comp);
+}
+::v-deep(.custom-container) {
+  background-color: red !important;
+}
+</style>

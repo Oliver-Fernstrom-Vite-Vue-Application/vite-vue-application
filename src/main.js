@@ -4,6 +4,7 @@ import { createPinia } from "pinia";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
 import App from "./App.vue";
 import axios from "axios";

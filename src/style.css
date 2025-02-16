@@ -11,7 +11,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding-top: 80px; /* Padding compensates for fixed navbar */
+
+  /* Main color variables for the app */
+  --bg-color: #000000;
+  --bg-color-comp: rgba(16, 15, 15, 0.985);
+  --bg-navbar: #151414;
+  --accent-color: rgba(85, 240, 168, 0.853);
+  --text-color: rgb(245, 245, 245);
+  --bg-text-hov: #272727;
 }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 .card-columns {
   @media (min-width: 992px) and (max-width: 1199.98px) {
     column-count: 4;
