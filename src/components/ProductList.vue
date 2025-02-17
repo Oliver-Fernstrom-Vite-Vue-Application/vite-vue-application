@@ -25,14 +25,14 @@ onMounted(() => {
     </div>
   </div>
 </template>
-<style scope>
+<style scoped>
+.custom-container {
+  background-color: var(--bg-color-prodlist) !important;
+}
 .text-center {
   color: var(--text-color);
 }
 body {
-  background-color: var(--bg-color-comp);
-}
-::v-deep(.custom-container) {
-  background-color: red !important;
+  background-color: var(--bg-color) !important;
 }
 </style>

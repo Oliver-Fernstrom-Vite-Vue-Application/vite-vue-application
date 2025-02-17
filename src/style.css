@@ -16,16 +16,19 @@
 
   /* Main color variables for the app */
   --bg-color: #000000;
-  --bg-color-comp: rgba(16, 15, 15, 0.985);
+  --bg-color-comp: rgba(32, 31, 31, 0.985);
+  --bg-color-prodlist: rgba(33, 33, 33, 0.985);
   --bg-navbar: #151414;
   --accent-color: rgba(85, 240, 168, 0.853);
   --text-color: rgb(245, 245, 245);
+  --text-color-dark: rgb(0, 0, 0);
   --bg-text-hov: #272727;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 .card-columns {
@@ -50,4 +53,8 @@ body {
   height: 200px;
   object-fit: contain;
   width: 100%;
+}
+html,
+body {
+  background-color: var(--bg-color) !important;
 }

@@ -55,8 +55,7 @@ const navbarClass = computed(() => {
           >
         </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="navbtext">
+        <!--         <b-navbar-nav class="navbtext">
           <b-nav-item-dropdown text="Lang" right>
             <b-dropdown-item href="#">ENG</b-dropdown-item>
             <b-dropdown-item href="#">SWE</b-dropdown-item>
@@ -71,7 +70,7 @@ const navbarClass = computed(() => {
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
           </b-nav-item-dropdown>
-        </b-navbar-nav>
+        </b-navbar-nav> -->
       </b-collapse>
     </b-navbar>
   </div>
@@ -127,12 +126,13 @@ const navbarClass = computed(() => {
   font-size: 1.5rem;
   font-weight: 300;
 }
-.me-3:hover,
-.brand-name:hover {
+.me-3:hover {
   transform: scale(1.1);
   transition: all 0.2s ease-in-out;
 }
-
+.brand-name:hover {
+  opacity: 0.5;
+}
 .brand-name {
   color: var(--accent-color);
   font-size: 1.5rem;
