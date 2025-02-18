@@ -24,4 +24,17 @@ export const useProductStore = defineStore("productStore", {
       }
     },
   },
+  // popularProducts is a getter that returns the 5 products with the highest rating
+  getters: {
+    // state refers to the state of the store
+    popularProducts: (state) => {
+      // if there are no prodcuts, return an empty array
+      if (!state.products.length) return [];
+      // Returns a copy of the products array
+      // Sorted by rating in descending order, sliced at 5
+      return [...state.products]
+        .sort((a, b) => b.rating.rate - a.rating.rate) // Sorts the array by rating in descending order
+        .slice(0, 6); // Slices the array at index 6
+    },
+  },
 });

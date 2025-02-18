@@ -54,33 +54,12 @@ const navbarClass = computed(() => {
             >Contact</router-link
           >
         </b-navbar-nav>
-
-        <!--         <b-navbar-nav class="navbtext">
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">ENG</b-dropdown-item>
-            <b-dropdown-item href="#">SWE</b-dropdown-item>
-            <b-dropdown-item href="#">GER</b-dropdown-item>
-            <b-dropdown-item href="#">ESP</b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-item-dropdown right class="navbtext">
-            <template #button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav> -->
       </b-collapse>
     </b-navbar>
   </div>
 </template>
 
 <style scoped>
-/* ::v-deep(.navbar-default) {
-  background-color: var(--bg-color-comp) !important;
-}
- */
 .navbtext {
   color: var(--text-color) !important;
   font-size: 16px;

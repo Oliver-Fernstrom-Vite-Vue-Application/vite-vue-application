@@ -23,10 +23,12 @@ const product = computed(
 // Hantera antal produkter
 const quantity = ref(0);
 
+// Calculating cost of product. If quantity or price changes, cost will be recalculated
 const cost = computed(() => {
   return (quantity.value * product.value?.price || 0).toFixed(2);
 });
 
+// Function to increase & decrease quantity
 const increaseQuantity = () => quantity.value++;
 const decreaseQuantity = () => {
   if (quantity.value > 0) {
@@ -58,7 +60,12 @@ const closePopup = () => {
         :src="product.images?.[0] || product.thumbnail"
         :alt="product.title"
         @click="isImagePopup = true"
+        aria-label="Click to enlarge image"
       />
+      <p class="click-to-enlarge">
+        <i class="bi bi-arrows-fullscreen"></i> Click the image to enlarge
+      </p>
+
       <div class="card-body">
         <h1 class="card-title">{{ product.title }}</h1>
         <p class="card-text accent-text price">
@@ -83,11 +90,12 @@ const closePopup = () => {
         </div>
 
         <p v-if="quantity > 0" class="str-text">
-          <i class="bi bi-bag-check"></i> Added to cart:
+          <i class="bi bi-bag-check cstm-icn"></i>
+          Added to cart:
           <span class="accent-text"> {{ quantity }}</span>
         </p>
         <p v-if="quantity > 0" class="str-text">
-          <i class="bi bi-wallet2"></i> Product Total:
+          <i class="bi bi-wallet2 cstm-icn"></i> Product Total:
           <span class="accent-text">
             {{ cost }} <i class="bi bi-currency-dollar"></i
           ></span>
@@ -104,6 +112,16 @@ const closePopup = () => {
         </button>
         <div class="collapse mt-2" :id="'collapse' + product.id">
           <p class="card-text">{{ product.description }}</p>
+          <span>Product Status:</span>
+          <p>
+            <i class="bi bi-check-lg cstm-icn"></i>
+            {{ product.availabilityStatus }}
+          </p>
+          <p>
+            <i class="bi bi-star-fill yellow-icon"> </i>
+            Rating:
+            <span>{{ product.rating }}</span>
+          </p>
         </div>
       </div>
     </div>
@@ -135,19 +153,31 @@ const closePopup = () => {
 }
 
 .lightbox-img {
-  max-width: 50%;
+  max-width: 40%;
   max-height: auto;
 }
-
+.click-to-enlarge {
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: center;
+  margin-top: 5px;
+  cursor: pointer;
+}
 .product-details-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 .product-details-card {
   background-color: var(--bg-color-comp) !important;
   color: var(--text-color);
   width: 100%;
+}
+.product-img-large {
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
 }
 li {
   list-style: none;
@@ -184,5 +214,13 @@ li {
 }
 .str-text {
   margin: 15px;
+}
+/* Cart & Wallet icons */
+.cstm-icn {
+  font-size: 1.5rem;
+}
+/* Star rating icon */
+.yellow-icon {
+  color: #f0d800;
 }
 </style>

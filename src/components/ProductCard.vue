@@ -18,19 +18,6 @@ const props = defineProps({
 });
 // Keeping track of product quantity
 const quantity = ref(0);
-
-// Calculating cost of product. If quantity or price changes, cost will be recalculated
-const cost = computed(() => {
-  return (quantity.value * props.product.price).toFixed(2);
-});
-
-// Function to increase & decrease quantity
-const increaseQuantity = () => quantity.value++;
-const decreaseQuantity = () => {
-  if (quantity.value > 0) {
-    quantity.value--;
-  }
-};
 </script>
 
 <template>

@@ -1,10 +1,13 @@
 <script setup>
-import ProductList from "../components/ProductList.vue/";
+import ProductList from "../components/ProductList.vue";
+import HotProducts from "../components/HotProducts.vue";
 </script>
 
 <template>
+  <h1 class="text-center">Welcome to Shady Stuff</h1>
+
+  <HotProducts />
   <div class="container mt-4">
-    <h1 class="text-center">Welcome to Shady Stuff</h1>
     <ProductList />
   </div>
 </template>
