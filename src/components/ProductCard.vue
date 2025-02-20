@@ -1,8 +1,9 @@
 <script setup>
 // Importing Computed, Ref, reactive and defineProps
-import { computed, ref, defineProps } from "vue";
+import { ref, defineProps } from "vue";
 
 // Defining product props
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
   product: {
     type: Object,
@@ -20,6 +21,7 @@ const props = defineProps({
 const quantity = ref(0);
 </script>
 
+<!-- Bootstrap card component -->
 <template>
   <router-link :to="`/product/${product.id}`" class="card-link">
     <!-- if product is avaible, create card with product details -->

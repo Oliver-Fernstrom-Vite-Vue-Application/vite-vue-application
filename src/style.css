@@ -19,9 +19,11 @@
   --bg-color-comp: rgba(32, 31, 31, 0.985);
   --bg-color-prodlist: rgba(33, 33, 33, 0.985);
   --bg-navbar: #151414;
+  --bg-color-form: #0c0c0c;
   --bg-text-hov: #272727;
   --accent-color: rgba(85, 240, 168, 0.853);
   --text-color: rgb(245, 245, 245);
+  --text-color-form: rgb(143, 141, 141);
   --text-color-dark: rgb(0, 0, 0);
 }
 

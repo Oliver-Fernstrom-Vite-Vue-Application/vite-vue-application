@@ -3,6 +3,8 @@ import { useProductStore } from "../stores/productStores";
 import { computed, onMounted } from "vue";
 
 const productStore = useProductStore();
+
+// get popular products from store with computed property
 const hotProducts = computed(() => productStore.popularProducts);
 
 // if the store is empty, load the products on mount before rendering component
@@ -13,7 +15,7 @@ onMounted(() => {
   }
 });
 
-// Funktion för att dela upp produkter i grupper om 3
+// This function will chunk the hotProducts array into smaller arrays of 3 products - for the carousel
 const chunkedHotProducts = computed(() => {
   const chunkSize = 3;
   const chunks = [];

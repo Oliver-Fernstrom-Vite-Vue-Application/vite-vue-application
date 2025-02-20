@@ -1,3 +1,4 @@
+<!-- Bootstrap Contact form, with custom styles -->
 <template>
   <div class="container mt-4">
     <h1 class="text-center">Contact</h1>
@@ -67,10 +68,10 @@
 }
 
 .container {
-  background-color: rgba(49, 49, 49, 0.474);
+  background-color: var(--bg-color-form);
 }
 .text-center {
-  color: #28f897e3;
+  color: var(--accent-color);
 }
 .custom-btn {
   background-color: var(--bg-text-hov);
@@ -82,11 +83,25 @@
   background-color: var(--accent-color);
   color: var(-- --text-color-dark);
 }
+.custom-placeholder {
+  background-color: var(--bg-color-form);
+}
 .custom-placeholder::placeholder {
-  color: var(--bg-text-hov);
+  color: var(--text-color-form);
   font-size: 1.1rem;
   font-weight: 400;
   font-style: italic;
   opacity: 0.8;
+}
+.custom-placeholder:focus {
+  background-color: var(--bg-color-form) !important;
+  color: var(--text-color);
+  outline: none;
+  box-shadow: none;
+}
+
+#exampleFormControlTextarea1 {
+  background-color: var(--bg-color-form);
+  color: var(--text-color);
 }
 </style>

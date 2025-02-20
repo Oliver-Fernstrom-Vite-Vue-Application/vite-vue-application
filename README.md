@@ -1,5 +1,14 @@
-# Vue 3 + Vite
+Vite + Vue 3 E-commerce App
+A simple e-commerce app built with Vue 3, Vite, Pinia, and Vue Router. The app fetches product data via an API and displays it in a responsive interface using Bootstrap.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Features
+-API data fetching with Axios
+-Product listing & details pages
+-Vue Router for navigation
+-Pinia for state management
+-Bootstrap for responsive design
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+This project is for educational purposes and free to use.
+
+Best,
+Oliver Fernström
