@@ -25,7 +25,7 @@ const chunkedHotProducts = computed(() => {
 </script>
 <template>
   <section v-if="hotProducts.length">
-    <h2 class="text-2xl font-bold mb-4 text-center">🔥 Popular Products</h2>
+    <h2 class="text-2xl font-bold mb-4 text-center">Popular Products</h2>
 
     <div
       id="multiProductCarousel"
@@ -45,20 +45,25 @@ const chunkedHotProducts = computed(() => {
               :key="product.id"
               class="col-12 col-md-4"
             >
-              <div class="card custom-carousel">
-                <img
-                  class="card-img-top"
-                  :src="product.images?.[0] || product.thumbnail"
-                  :alt="product.title"
-                />
-                <div class="card-body text-center">
-                  <h5 class="card-title">{{ product.title }}</h5>
-                  <h5 class="review-text">
-                    "{{ product.reviews[2].comment }}"
-                  </h5>
-                  <p class="text-lg font-bold mt-1">${{ product.price }}</p>
+              <router-link
+                :to="`/product/${product.id}`"
+                class="text-decoration-none"
+              >
+                <div class="card custom-carousel">
+                  <img
+                    class="card-img-top"
+                    :src="product.images?.[0] || product.thumbnail"
+                    :alt="product.title"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <h5 class="review-text">
+                      "{{ product.reviews[2].comment }}"
+                    </h5>
+                    <p class="text-lg font-bold mt-1">${{ product.price }}</p>
+                  </div>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>

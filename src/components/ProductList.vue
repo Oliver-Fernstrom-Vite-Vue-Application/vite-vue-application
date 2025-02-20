@@ -14,12 +14,14 @@ onMounted(() => {
   <div class="container mt-4 custom-container">
     <h2 class="mb-4 text-center">Discover products</h2>
 
+    <!-- Loop through the products array from productStore and render ProductCard component for each product -->
     <div class="row">
       <div
         v-for="product in productStore.products"
         :key="product.id"
         class="col-12 col-sm-6 col-md-4 mb-4"
       >
+        <!-- Rendering the ProductCard component with product prop set to product -->
         <ProductCard :product="product" />
       </div>
     </div>
